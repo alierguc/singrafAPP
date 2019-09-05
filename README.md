@@ -14,10 +14,7 @@
 > looking like it's been marked up with tags
 > or formatting instructions.
 <br>
-<br>
-<br>
 ```sh
-$ cd dillinger
-$ npm install -d
-$ node app
+$ npm install --production
+$ NODE_ENV=production node app
 ```
