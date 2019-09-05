@@ -1,0 +1,115 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <button ion-button menuToggle style="margin-top:6%;">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title center style="margin-top:6%;">{{nname}} </ion-title>
+  </ion-navbar>
+</ion-header>
+
+  <ion-spinner name="crescent" *ngIf="!uBilgiler" color="dark"></ion-spinner>
+  <ion-content *ngFor="let user of uBilgiler">
+     
+    <div id="profile-bg"></div>
+   
+    <div id="content">
+        <ion-fab right top>
+            <button ion-fab fab-mini-size color="dark">
+              <ion-icon name="ios-chatbubbles"></ion-icon>
+            </button>
+            <ion-fab-list side="bottom">
+              <button ion-fab (click)="instagram('https://www.instagram.com/')" *ngIf="!socialinsta">
+                <ion-icon name="logo-instagram" color="instagram"></ion-icon>
+              </button>
+              <button ion-fab (click)="facebook('https://tr-tr.facebook.com/')" *ngIf="!socialface">
+                <ion-icon name="logo-facebook" color="facebook"></ion-icon>
+              </button>
+              <button ion-fab (click)="twitter('https://twitter.com/')" *ngIf="!socialtwit">
+                <ion-icon name="logo-twitter" color="twitter"></ion-icon>
+              </button>
+            </ion-fab-list>
+          </ion-fab>
+      <!--
+        <ion-fab right top *ngIf="user.F_NAME != diger">
+            <button ion-fab  fab-mini-size color="dark" (click)="mesajG()"><ion-icon name="ios-mail"></ion-icon></button>      
+        </ion-fab>
+      -->
+        <div id="profile-info">
+
+          <img id="profile-image" src="{{user.IMAGE}}" (click)="presimizle(user.IMAGE)">
+    
+    
+          <h3 id="profile-name">{{user.N_NAME}}</h3>
+          <span id="profile-description">@{{user.F_NAME2}}_{{user.L_NAME2}}</span>
+    
+          <p></p>
+          <ion-icon name="md-rose" color="dark"></ion-icon> <span
+          id="profile-description"><strong>Doğum Tarihi : {{user.B_DATE}}</strong></span>
+    
+        <br>
+        <br>
+          <ion-icon name="ios-heart" color="dark"></ion-icon> <span
+            id="profile-description"><strong>Toplam Beğeni : {{user.SCORE}}</strong></span>
+    
+          <br>
+          <br>
+    
+           <ion-icon name="pin" color="dark"></ion-icon> <span
+            id="profile-description"><strong>Şehir : {{user.CITY}}</strong></span>
+    
+          <br>
+          
+        </div>
+    
+            </div>
+            <ion-card style="margin-top: 15px;">
+              <div style="padding-left:7px; padding-right:7px;margin-top: 15px;">
+                <div>
+                  <h1 style="text-align:center;">Biyografi</h1>
+                  <br>
+                  <p style="text-align:center; padding-left:4%; padding-right:4%;">{{user.BIO}}</p>
+                </div>
+              </div>
+              <br>
+            </ion-card>
+            <button ion-button full color="dark" *ngIf="user.USER_ID == diger" (click)="mesajG(user.IMAGE)">Mesaj Gönder</button>
+            <ion-title color="dark">
+              <p style="text-align:center; color: #ce0e0e;">Yüklenen Videolar</p>
+            </ion-title>
+            <div class="canvasi" *ngIf="record">
+              <lottie-animation-view *ngIf="record" [options]="lottieConfig3" [width]="300" [height]="400">
+              </lottie-animation-view>
+            </div>
+            <p *ngIf="record" style="font-size: 16px; color:#ce0e0e; width:100%; text-align:center;">Kullanıcının içeriği bulunamamaktadır</p>
+            <autoplay-content>
+            <ion-card *ngFor="let user of bottomData">
+  
+        <ion-item>
+          <br>
+          <h2 (click)="presentPopover(user.USER_ID)">{{user.N_NAME}}</h2>
+          <p><span>Söz Müzik :</span> <b><span>{{user.MELODY_NAME_SURNAME}}</span></b></p>
+          <br>
+          <p><span>Şarkı Adı :</span> <b><span>{{user.MUSIC_NAME}}</span></b></p>
+          <br>
+          <p><span>Tür :</span> <b><span>{{user.CATEGORY_NAME}}</span></b></p>
+        </ion-item>
+        <div>
+          <video width="900" height="180" poster="{{user.THUMB}}">
+            <source src="{{user.VIDEO}}" type="video/mp4">
+            Videonuz Yüklenemiyor
+          </video>
+        </div>
+        <ion-card-content>
+          <p><b><span>Yüklenme Tarihi : </span></b> <span>{{user.UPLOAD_DATE}}</span></p>
+          <br>
+          <p><b><span>Beğeni Sayısı : </span></b> <span>{{user.LIKES}}</span></p>
+          <br>
+  
+        </ion-card-content>
+  
+      </ion-card>
+      <br>
+      <br>
+      <br>
+    </autoplay-content>
+  </ion-content>

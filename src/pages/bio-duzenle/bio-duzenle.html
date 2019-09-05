@@ -1,0 +1,126 @@
+<ion-header>
+
+  <ion-navbar color="dark">
+    <ion-title center style="margin-top:6%;">Kullanıcı Ayarları</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-spinner item-start name="crescent" *ngIf="!uBilgiler" color="dark"></ion-spinner>
+<ion-content>
+<ion-list *ngFor="let bilgi of uBilgiler">
+  <ion-list-header>     
+    <ion-avatar item-start>
+      <img src="{{bilgi.IMAGE}}">
+    </ion-avatar>
+    <b><p class="username">{{bilgi.N_NAME}}</p></b>
+    <p>{{bilgi.F_NAME}} {{bilgi.L_NAME}}</p>
+  </ion-list-header>
+</ion-list>
+<ion-list no-border>
+  <ion-list-header>
+    Kullanıcı Bilgileriniz
+  </ion-list-header>
+  <ion-item>
+    <ion-icon color="dark" name='md-person' item-start></ion-icon>
+    <ion-input placeholder="Ad " type="text" [(ngModel)]="userData.f_name">
+    </ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-icon color="dark" name='ios-person-outline' item-start></ion-icon>
+    <ion-input placeholder="Soyad " type="text" [(ngModel)]="userData.l_name">
+    </ion-input>  
+  </ion-item>
+  <ion-item>
+    <ion-icon color="dark" name='md-compass' item-start></ion-icon>
+    <ion-input placeholder="Şehir " type="text" [(ngModel)]="userData.city">
+    </ion-input> 
+  </ion-item>
+  <ion-item>
+    <ion-icon color="dark" name='md-bicycle' item-start></ion-icon>
+    <ion-input placeholder="Biyografi " type="text" [(ngModel)]="userData.bio">
+    </ion-input>   
+  </ion-item>
+  <ion-item>
+    <ion-icon color="dark" name='md-calendar' item-start></ion-icon>
+    <ion-label>Doğum Tarihi</ion-label>
+    <ion-datetime displayFormat="YYYY-DD-MM" 
+    pickerFormat="YYYY-MM-DD" [(ngModel)]="userData.b_date"
+    min="1950-01-01" max="2014-12-31"
+    [doneText]="('tamam')"
+    [cancelText]="('iptal')"
+    ></ion-datetime>
+  </ion-item>
+  <ion-item>
+    <button color="label-color" ion-button (click)="degistir()" item-end>
+      <p style="font-family: Arial, Helvetica, sans-serif; color:#ce0e0e;">DEĞİŞTİR</p>
+    </button>
+  </ion-item>
+</ion-list>
+
+<ion-list>
+    <ion-list-header>
+      Sosyal medya hesabı ekle
+    </ion-list-header>
+    <ion-item>
+        <ion-icon color="instagram" name='logo-instagram' item-start></ion-icon>
+      <ion-input placeholder="{{datains}}" type="text" [(ngModel)]="sociaButton.ins">
+        </ion-input>       
+       
+    </ion-item>
+    <ion-item>
+        <ion-icon color="facebook" name='logo-facebook' item-start></ion-icon>
+      <ion-input placeholder="{{dataface}}" type="text" [(ngModel)]="sociaButton.face">
+        </ion-input>   
+       
+    </ion-item>
+    <ion-item>
+        <ion-icon color="twitter" name='logo-twitter' item-start></ion-icon>
+      <ion-input placeholder="{{datatwitter}}" type="text" [(ngModel)]="sociaButton.twit">
+        </ion-input>     
+      
+    </ion-item>
+    <ion-item >   
+      <button  color="label-color" ion-button full (click)="socialMedia()" item-end>
+        <p style="font-family: Arial, Helvetica, sans-serif; color:#ce0e0e;">KAYDET</p>
+      </button>
+    </ion-item>
+  </ion-list>
+
+<ion-list>
+  <ion-list-header>
+    Kullanıcı Adımı Değiştir
+  </ion-list-header>
+  <ion-item>
+      <ion-icon color="dark" name='ios-person' item-start></ion-icon>
+    <ion-input placeholder="Kullanıcı Adımı Değiştir " type="text" [(ngModel)]="bodyTwo.n_name">
+      </ion-input>       
+  </ion-item>
+  <ion-item >   
+    <button  color="label-color" ion-button (click)="kullaniciDegistir()" item-end>
+      <p style="font-family: Arial, Helvetica, sans-serif; color:#ce0e0e;">DEĞİŞTİR</p>
+    </button>
+  </ion-item>
+</ion-list>
+
+<ion-list>
+  <ion-list-header>
+    Şifremi Değiştir
+  </ion-list-header>
+  <ion-item>
+    <ion-icon color="dark" name='ios-lock' item-start></ion-icon>
+    <ion-input placeholder="Şifremi Değiştir " type="password" [(ngModel)]="bodyThree.new_pass">
+    </ion-input>  
+  </ion-item>
+  <ion-item>
+    <ion-icon color="dark" name='ios-lock' item-start></ion-icon>
+    <ion-input placeholder="Şifre Tekrar " type="password" [(ngModel)]="rp">
+    </ion-input>   
+  </ion-item>
+  <ion-item >   
+    <button  color="label-color" ion-button (click)="sifreDegis()" item-end>
+      <p style="font-family: Arial, Helvetica, sans-serif; color:#ce0e0e;">DEĞİŞTİR</p>
+    </button>
+  </ion-item>
+</ion-list>
+</ion-content>

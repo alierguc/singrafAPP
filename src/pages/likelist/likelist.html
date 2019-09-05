@@ -1,0 +1,45 @@
+<!--
+  Generated template for the LikelistPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header color="dark">
+  <ion-navbar color="dark">
+    <ion-title>Beğenenler</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="canvasi" *ngIf="!likeusers">
+    <lottie-animation-view *ngIf="!likeusers" [options]="lottieConfig" [width]="300" [height]="300">
+    </lottie-animation-view>
+  </div>
+  <div class="canvasi" *ngIf="lottieControl">
+    <lottie-animation-view *ngIf="lottieControl" [options]="lottieConfig2" [width]="300" [height]="300">
+    </lottie-animation-view>
+  </div>
+  <p *ngIf="lottieControl" style="font-size: 24px; color:#ce0e0e; width:100%; text-align:center;">Henüz beğenen
+    kullanıcı yok. !</p>
+  <ion-list *ngFor="let luser of likeusers" (click)="goProfile(luser.USER_ID,luser.N_NAME,luser.IMAGE)"
+    style="border-bottom: 1px solid rgb(175, 175, 175) !important;">
+    <ion-item style=" margin-top: 0px;">
+      <ion-thumbnail item-start>
+        <img src="{{luser.IMAGE}}">
+      </ion-thumbnail>
+      <h2>{{luser.N_NAME}}</h2>
+      <ion-note>
+        {{luser.F_NAME}} {{luser.L_NAME}}
+      </ion-note>
+    </ion-item>
+
+  </ion-list>
+  <strong>
+    <p *ngIf="noRecord" style="color:rgb(160, 154, 154); margin-top: 0px;  text-align:center;">Daha fazla beğenen
+      kullanıcı yok. !</p>
+  </strong>
+  <ion-infinite-scroll style="height:1vh;" (ionInfinite)="doInfinite($event)" *ngIf="!noRecord">
+    <ion-infinite-scroll-content loadingSpinner="crescent" loadingText="Yükleniyor...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

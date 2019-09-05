@@ -1,0 +1,30 @@
+<ion-header>
+
+  <ion-navbar color="dark" hideBackButton *navbar hideMenuToggle>
+    <ion-title center>Şifremi Unuttum</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<div class="login-container">
+    <div class="limiter">
+      <div class="container-login100">
+        <div class="wrap-login100">
+          <div class="wrap-input100 validate-input">
+            <input class="input100" placeholder="Mail Adresinizi Giriniz " type="username" [(ngModel)]="bilgi.mail">
+            <span class="focus-input100"></span>
+            <span class="symbol-input100">
+              <ion-icon name="ios-mail"></ion-icon>
+            </span>
+          </div>
+          <div class="container-login100-form-btn">
+            <button class="login100-form-btn" (click)="su()">
+              <ion-icon name="md-log-in"></ion-icon>&nbsp;
+              Aktivasyon Maili Gönder
+            </button>
+          </div>
+          <div class="container-login100-form-btn">
+            <button class="login100-form-btn" (click)="don()">
+              <ion-icon name="md-log-in"></ion-icon>&nbsp;
+              Giriş Sayfasına Dön
+            </button>
+          </div>

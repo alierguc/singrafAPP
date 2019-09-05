@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title color="dark">Video Duzenle</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-item class="bg-imagelogin">
+    <ion-label color="television" floating>Söz Yazarı : {{meName}}</ion-label>
+    <ion-input color="television" type="username" [(ngModel)]="bilgi.muzik_yazar">
+    </ion-input>
+  </ion-item>
+  <ion-item class="bg-imagelogin">
+    <ion-label color="television" floating>Müzik Adı : {{muName}}</ion-label>
+    <ion-input color="television" type="username" [(ngModel)]="bilgi.muzik_adi">
+    </ion-input>
+  </ion-item>
+  <ion-list radio-group>
+    <br>
+    <ion-title center>Kategori Seç</ion-title>
+    <br>
+    <ion-list *ngFor="let user of kategoriGetir">
+      <ion-item>
+        <ion-label>{{user.CATEGORY}}</ion-label>
+        <ion-radio (ionSelect)='showConfirmAlert(user.ID)'></ion-radio>
+      </ion-item>
+    </ion-list>
+
+
+  </ion-list>
+
+
+  <ion-card>
+    <ion-item>
+      <br>
+      <p><span>Söz Müzik :</span> <b><span>{{meName}}</span></b></p>
+      <br>
+      <p><span>Şarkı Adı :</span> <b><span>{{muName}}</span></b></p>
+      <br>
+      <p><span>Tür :</span> <b><span>{{catname}}</span></b></p>
+    </ion-item>
+    <div>
+      <video width="900" height="180" controls poster="{{thumb}}">
+        <source src="{{video}}" type="video/mp4">
+        Videonuz Yüklenemiyor
+      </video>
+    </div>
+    <ion-card-content>
+      <p><b><span>Yüklenme Tarihi : </span></b> <span>{{uploaddate}}</span></p>
+      <br>
+      <button ion-button (click)="Yolla()">Düzenle</button>
+      
+    </ion-card-content>
+  </ion-card>
+</ion-content>

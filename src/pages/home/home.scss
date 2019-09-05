@@ -1,0 +1,573 @@
+page-home {
+
+  @font-face {
+    font-family: Ubuntu-R;
+    src: url('../fonts/Ubuntu-R.ttf'); 
+  }
+  .p{
+    font-family: 'Ubuntu-R', Arial, sans-serif;
+  }
+  .h3
+  {
+    font-size: 24px;
+    font-family: Ubuntu-R;
+    src: url('../fonts/Ubuntu-R.ttf'); 
+  }
+  
+  .canvasi
+  {
+    margin-top: 10%;
+  }
+  .wrapper
+{
+	padding-bottom: 90px;
+}
+
+.divider
+{
+	position: relative;
+  margin-top: 5%;
+  width: 100%;
+	height: 1px;
+}
+
+.div-transparent:before
+{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 5%;
+	right: 5%;
+	width: 90%;
+	height: 1px;
+	background-image: linear-gradient(to right, transparent, rgb(48,49,51), transparent);
+}
+
+.div-arrow-down:after
+{
+	content: "";
+	position: absolute;
+	z-index: 1;
+	top: -7px;
+	left: calc(50% - 7px);
+	width: 14px;
+	height: 14px;
+	transform: rotate(45deg);
+	background-color: white;
+	border-bottom: 1px solid rgb(48,49,51);
+	border-right: 1px solid rgb(48,49,51);
+}
+
+.div-tab-down:after
+{
+	content: "";
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: calc(50% - 10px);
+	width: 20px;
+	height: 14px;
+	background-color: white;
+	border-bottom: 1px solid rgb(48,49,51);
+	border-left: 1px solid rgb(48,49,51);
+	border-right: 1px solid rgb(48,49,51);
+	border-radius: 0 0 8px 8px;
+}
+
+.div-stopper:after
+{
+	content: "";
+	position: absolute;
+	z-index: 1;
+	top: -6px;
+	left: calc(50% - 7px);
+	width: 14px;
+	height: 12px;
+	background-color: white;
+	border-left: 1px solid rgb(48,49,51);
+	border-right: 1px solid rgb(48,49,51);
+}
+
+.div-dot:after
+{
+	content: "";
+	position: absolute;
+	z-index: 1;
+	top: -9px;
+	left: calc(50% - 9px);
+	width: 18px;
+	height: 18px;
+	background-color: goldenrod;
+	border: 1px solid rgb(48,49,51);
+	border-radius: 50%;
+	box-shadow: inset 0 0 0 2px white,
+					0 0 0 4px white;
+}
+  .anim
+  {
+    margin-top: 40%;
+  }
+  @import url('https://fonts.googleapis.com/css?family=Inconsolata:700');  
+  .custom-class{
+     .toast-wrapper { 
+       background-color: rgb(13, 139, 34); 
+      } 
+    }
+
+    
+    .controls progress {
+      display:block;
+      width:100%;
+      height:81%;
+      margin-top:0.125rem;
+      border:none;
+      color:#0095dd;
+      -moz-border-radius:2px;
+      -webkit-border-radius:2px;
+      border-radius:2px;
+   }
+   video{
+    height: 50%; 
+    border-radius: 10px;
+    width:100%;
+    padding-left: 16%;
+    padding-right: 15%;
+    background-color: #000000;     
+ 
+    
+    
+    }
+      .video-container {
+        height: 10% ; 
+        width:100%;
+        border-radius: 20px;
+     
+        background-color: #000000;     
+     
+        }
+      @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+      body{
+        background: #f2f2f2;
+        font-family: 'Open Sans', sans-serif;
+      }
+      
+      .search {
+        width: 100%;
+        position: relative;
+        display: flex;
+      }
+      .ion-searchbar
+      {
+        background: #ce0e0e;
+      }
+      .searchTerm {
+        width: 100%;
+        border: 3px solid #00B4CC;
+        border-right: none;
+        padding: 5px;
+        height: 20px;
+        border-radius: 5px 0 0 5px;
+        outline: none;
+        color: #9DBFAF;
+      }
+      
+      .searchTerm:focus{
+        color: #00B4CC;
+      }
+      
+      .searchButton {
+        width: 40px;
+        height: 36px;
+        border: 1px solid #00B4CC;
+        background: #00B4CC;
+        text-align: center;
+        color: #fff;
+        border-radius: 0 5px 5px 0;
+        cursor: pointer;
+        font-size: 20px;
+      }
+      
+      /*Resize the wrap to see the search bar change!*/
+      .wrap{
+        width: 30%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      ion-card {
+      
+        border-radius:30px !important;
+        display: flex;
+        flex-direction: column;
+        width: 100% !important;
+        margin: 0 !important;
+        margin-top: 6% !important;
+        box-shadow: none !important;
+        
+        }
+     
+     
+      
+      ion-footer {
+        ion-icon {
+            font-size: 30px;
+        }
+    }
+        background-color: aqua;
+        color: blueviolet;
+        .bg-image
+        {
+          background-image: url('../assets/imgs/hakkindabackground.png');
+          background-repeat:repeat-y;
+          background-position:center;
+         
+        }
+        
+    
+    }
+    
+     #notification-button {            
+                position: relative;
+                width: 42px;
+                top:1px;
+                right: 1px;
+                overflow: visible!important;
+    }
+    /* Slide Bölümü */
+    
+    
+    
+       #notifications-badge {
+                background-color: red;
+                position: absolute;
+                top: -3px;
+                right: -3px;
+                border-radius: 100%;
+            }
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      padding-top: 0px;
+      height: 0;
+      overflow: hidden;
+    }
+    
+    
+    
+    .no-scroll .scroll-content{
+      overflow: hidden;
+    }
+    
+    body {
+      background: #ddd;
+    }
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+    iframe,
+    embed,
+    object {
+      max-width: 100%;
+    }
+    .container {
+      width: 70%;
+      padding: 5%;
+      margin:0px auto;
+      background:#fff;
+      box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+    }
+    .vendor {
+      padding: 2%;
+      background: #000000;
+      margin-bottom: 2em;
+    }
+    .unsupported {
+      background: #fddfde;
+    
+    }
+    
+    
+    body {
+      cursor: url('https://ionicframework.com/img/finger.png'), auto;
+    }
+    
+    .customTrans {
+    -webkit-transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    -ms-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    transition: all 1s ease-out;  
+    }
+    /* Videoplayer */
+    
+    .duyurular
+    {
+      background-image: url("../assets/imgs/hakkindabackground.png");
+      margin-top:0px;
+      width: 100%;
+      height: 50px;
+      background-color: rgb(123,67,151);
+      margin-bottom: 2px;
+    }
+    .wide-item {
+      width: 10000px;
+    /*  overflow-x: scroll; /*
+    /*  -webkit-overflow-scrolling: touch;  */
+    }
+    ion-scroll[scrollX] {
+      white-space: nowrap;
+      height: 120px;
+      overflow: hidden;
+    
+      .scroll-item {
+        display: inline-block;
+      }
+    
+      .selectable-icon{
+        margin: 10px 20px 10px 20px;
+        color: red;
+        font-size: 100px;
+      }
+    
+      ion-avatar img{
+        margin: 10px;
+      }
+    }
+    
+    ion-scroll[scroll-avatar]{
+      height: 60px;
+    }
+    
+    /* Hide ion-content scrollbar */
+    ::-webkit-scrollbar{
+      display:none;
+    }
+    
+    body
+    {
+     width:100%;
+     margin:0 auto;
+     padding:0px;
+     font-family:helvetica;
+     background-color:#ce0e0e;
+    }
+    #wrapper
+    {
+     text-align:center;
+     margin:0 auto;
+     padding:0px;
+     width:995px;
+    }
+    #player_wrapper
+    {
+     position:relative;
+     width:400px;
+     margin-left:300px;
+    }
+    #video_player
+    {
+     width:400px;
+    }
+    #player_controls
+    {
+     top:98%;
+     position:absolute;
+     background-color:black;
+     width:100%;
+     padding:5px;
+     box-sizing:border-box;
+    }
+    input[type="image"]
+    {
+     float:left;
+     height:20px;
+     margin-left:2px;
+     margin-right:5px;
+     margin-top:2px;
+    }
+    #vol_img
+    {
+     margin-left:150px;
+     width:20px;
+    }
+    .popup-menu ion-icon {
+      text-align: center;
+      color: white;
+      font-size: 2.5em;
+      
+    }
+    .popup-menu-overlay {
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      
+      right: 0px;
+      bottom: 0px;
+      z-index: 100;
+      opacity: 0;
+      visibility: hidden;
+      -webkit-transition: all 0.15s ease-in-out;
+      transition: all 0.15s ease-in-out;
+      background-image: -webkit-linear-gradient(rgba(68, 68, 68, 0.5) 0%, rgba(68, 68, 68, 0.25) 100%);
+        background-image: linear-gradient(rgba(68, 68, 68, 0.5) 0%, rgba(68, 68, 68, 0.25) 100%);
+    }
+    .popup-menu-overlay.in {
+      opacity: 1;
+      visibility: visible;
+    }
+    .popup-menu-toggle {
+      position: fixed;
+     
+      width: 40px;
+      height: 40px;
+      bottom: 10px;
+      left: 50%;
+      margin-left: -20px;
+      background-color: rgb(215,14,14);
+      border-radius: 50%;
+      z-index: 101;
+      -webkit-transition: all 0.25s ease-in-out;
+      transition: all 0.25s ease-in-out;
+    }
+    .popup-menu-toggle:before {
+      position: absolute;
+      
+      content: '\f10a';
+      font-family: "Ionicons";
+      width: 40px;
+      height: 40px;
+      top: 0px;
+      left: 0px;
+      line-height: 40px;
+      text-align: center;
+      font-size: 28px;
+      color: white;
+      opacity: 1;
+      -webkit-transition: all 0.25s ease-in-out;
+      transition: all 0.25s ease-in-out;
+      -webkit-transform-origin: 100% 100%;
+      transform-origin: 100% 100%;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+    .popup-menu-toggle.out {
+      opacity: 0;
+      visibility: hidden;
+      -webkit-transform: scale(0);
+      transform: scale(0);
+      -webkit-transition: all 0.15s ease-in-out;
+      transition: all 0.15s ease-in-out;
+    }
+    .popup-menu-toggle.out:before {
+      -webkit-transition: all 0.15s ease-in-out;
+      transition: all 0.15s ease-in-out;
+      -webkit-transform: scale(0);
+      transform: scale(0);
+    }
+    .popup-menu-panel {
+      position: fixed;
+      width: 300px;
+      
+      height: 180px;
+      border-radius: 5%;
+      bottom: 20px;
+      left: 50%;
+      margin-left: -150px;
+      padding: 0px 5px;
+      background-color: rgb(215,14,14);
+      z-index: 102;
+      -webkit-transition: all 0.25s ease-in-out;
+      transition: all 0.25s ease-in-out;
+      -webkit-transition-delay: 0.15s;
+      transition-delay: 0.15s;
+      -webkit-transform-origin: 50% 100%;
+      transform-origin: 50% 100%;
+      -webkit-transform: scale(0);
+      transform: scale(0);
+      display: -webkit-box;
+      display: -moz-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-wrap: wrap;
+      -moz-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+    }
+    .popup-menu-panel .popup-menu-item {
+      margin: auto;
+    
+      -webkit-box-flex: 1 0 30%;
+      -webkit-flex: 1 0 30%;
+      -moz-box-flex: 1 0 30%;
+      -moz-flex: 1 0 30%;
+      -ms-flex: 1 0 30%;
+      flex: 1 0 30%;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-direction: normal;
+      -webkit-box-orient: vertical;
+      -webkit-flex-direction: column;
+      -moz-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-transform: scale(0);
+      transform: scale(0);
+      opacity: 0;
+      -webkit-transition: all 0.25s ease-in-out;
+      transition: all 0.25s ease-in-out;
+    }
+    .popup-menu-panel .popup-menu-item i {
+      margin: auto 0px 5px 0px;
+      padding: 0px;
+      
+      font-size: 30px;
+      line-height: 30px;
+      text-align: center;
+      color: white;
+    }
+    .popup-menu-panel .popup-menu-item span {
+      padding: 0px;
+      margin: 0px 0px auto 0px;
+      color: white;
+      text-align: center;
+      font-size: 11px;
+      text-transform: uppercase;
+      font-weight: bold;
+      line-height: 11px;
+    }
+    .popup-menu-panel .popup-menu-item:active i {
+      color: rgb(221,65,53);
+      -webkit-transition: all 0.15s;
+      transition: all 0.15s;
+    }
+    .popup-menu-panel .popup-menu-item:active span {
+      color: rgb(221,65,53);
+      -webkit-transition: all 0.15s;
+      transition: all 0.15s;
+    }
+    .popup-menu-panel.in {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      -webkit-transition-delay: 0s;
+      transition-delay: 0s;
+    }
+    .popup-menu-panel.in .popup-menu-item {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      opacity: 1;
+      -webkit-transition-delay: 0.15s;
+      transition-delay: 0.15s;
+    }
+    
+  
+ 
+    

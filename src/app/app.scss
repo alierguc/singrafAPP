@@ -1,0 +1,29 @@
+#menu-avatar {
+    .user-avatar {
+      margin-top:2%;
+      padding: .5em;
+    }
+    h3,
+    .label {
+      color: white;
+      font-weight: bold;
+    }
+    .item {
+      background: transparent;
+    }
+    ion-content {
+      background: linear-gradient(48deg, rgba(173, 72, 97, 0.86) 0%, rgba(173, 72, 97, 0.86) 28%, rgb(206,14,14) 93%, rgb(206,14,14) 100%);
+    }
+    .menu-inner {
+      background: rgba(255, 255, 255, .3);
+    }
+    .fab-reactive-list {
+        left: 35% !important;
+        .fab {
+          border-radius: 10%;
+          width: 12em;
+          background-color: map-get($colors, light);
+          color: map-get($colors, primary);
+        }
+    }
+}

@@ -1,0 +1,28 @@
+page-popup-modal {
+    video{
+        height: 50%; 
+        border-radius: 10px;
+        width:100%;
+        padding-left: 16%;
+        padding-right: 15%;
+        background-color: #000000;     
+     
+        
+        
+        }
+        ion-card {
+      
+            border-radius:30px !important;
+            display: flex;
+            flex-direction: column;
+            width: 100% !important;
+            margin: 0 !important;
+            margin-top: 6% !important;
+            box-shadow: none !important;
+            
+            }
+            .button
+            {
+                border-radius: 20px;
+            }
+}

@@ -1,0 +1,20 @@
+<ion-header>
+
+  <ion-navbar color="dark">
+    <ion-title center style="margin-top:6%;">İçerik</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngFor="let user of habericerik">
+    <img height="240px;" src="{{user.RESIM1}}" onerror="this.src='assets/imgs/nophoto.png';" />
+    <ion-card-content>
+      <ion-card-title>
+       {{user.TARIH}}
+        </ion-card-title>
+      <br>
+      <b><p>{{user.ICERIK}}</p></b>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

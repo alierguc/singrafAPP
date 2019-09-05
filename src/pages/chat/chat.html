@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title>
+      Singapp Messenger
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-grid>
+    <ion-row *ngFor="let mesaj of mesajlar">
+
+      <ion-col col-9 *ngIf="mesaj.MY_MESSAGE === ''" class="message">
+        <span style="color:white">{{ mesaj.MESSAGE }}</span>
+        <div class="time" style="color:rgba(255, 255, 255, 0.712)"><strong>{{mesaj.DATE}}</strong></div>
+      </ion-col>
+
+      <ion-col offset-3 col-9 *ngIf="mesaj.MY_MESSAGE !== ''" class="other_message">
+        <span style="color:white">{{ mesaj.MY_MESSAGE }}</span>
+        <!-- <div style="height:6px;width:6px;background-color:white;" *ngIf='mesaj.STATUS === "true"'></div>-->
+        <div class="time" style="color:rgba(255, 255, 255, 0.712)"><strong>{{mesaj.DATE}}</strong></div>
+
+      </ion-col>
+
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-row>
+      <ion-col col-9>
+        <ion-item no-lines>
+          <ion-input type="text" placeholder="Mesaj yaz..." [(ngModel)]="MESAJ"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col col-3>
+        <button ion-button clear color="primary" (click)="mesajGonder()" [disabled]="mesaj === ''">
+          Gönder
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-footer>

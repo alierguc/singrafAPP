@@ -1,0 +1,95 @@
+
+<div class="login-container">
+  <div class="limiter">
+    <div class="container-login100">
+      <div class="wrap-login100">
+        
+        <form class="login100-form validate-form">
+          <span class="login100-form-title">
+              <img  src="assets/imgs/slogo.png" alt="IMG" width="290px;" height="130px;">
+          </span>
+
+          <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+            <input class="input100" type="text" name="email" placeholder="E-mail Adresiniz" [(ngModel)]="bilgi.mail">
+            <span class="focus-input100"></span>
+            <span class="symbol-input100">
+                <ion-icon name="ios-mail"></ion-icon>
+            </span>
+          </div>
+
+          <div class="wrap-input100 validate-input" data-validate = "Password is required">
+            <input class="input100" type="password" name="pass" placeholder="Şifreniz" [(ngModel)]="bilgi.pass">
+            <span class="focus-input100"></span>
+            <span class="symbol-input100">
+                <ion-icon name="md-unlock"></ion-icon>
+            </span>
+          </div>
+          
+          <div class="container-login100-form-btn" style="width:100%;">
+            <button class="login100-form-btn" (click)="login()">
+                <ion-icon name="md-log-in"></ion-icon>&nbsp;
+                Giriş Yap 
+            </button>
+          </div>
+
+          <div class="container-login100-form-btn">
+            <button class="login100-form-btn" (click)="kayitol()">  
+                <ion-icon name="md-musical-notes"></ion-icon>&nbsp;
+                Kayıt Ol     
+            </button>
+          </div>
+          <h6 (click)="sifremiunuttump()" style="text-align:center; margin-top: 4px;"><ion-icon name="ios-help-buoy" color="secondary">&nbsp;</ion-icon><u>Şifremi Unuttum</u></h6>
+          
+        </form>
+      </div>
+    </div>
+</div>
+
+
+  <!--
+  <div class="login-container">
+    <div class="limiter">
+      <div class="container-login100">
+        <div class="wrap-login100">
+          
+          <form class="login100-form validate-form">
+            <span class="login100-form-title">
+                <img style="border-radius: 50%; border: 2px;" src="../assets/imgs/Music_by_LittleGirl88.jpg" alt="IMG" width="150px;" height="150px;">
+            </span>
+  
+            <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+              <input class="input100" type="text" name="email" placeholder="E-mail Adresiniz" [(ngModel)]="bilgi.mail">
+              <span class="focus-input100"></span>
+              <span class="symbol-input100">
+                  <ion-icon name="ios-mail"></ion-icon>
+              </span>
+            </div>
+  
+            <div class="wrap-input100 validate-input" data-validate = "Password is required">
+              <input class="input100" type="password" name="pass" placeholder="Şifreniz" [(ngModel)]="bilgi.pass">
+              <span class="focus-input100"></span>
+              <span class="symbol-input100">
+                  <ion-icon name="md-unlock"></ion-icon>
+              </span>
+            </div>
+            
+            <div class="container-login100-form-btn" style="width:100%;">
+              <button class="login100-form-btn" (click)="login()">
+                  <ion-icon name="md-log-in"></ion-icon>&nbsp;
+                  Giriş Yap 
+              </button>
+            </div>
+
+            <div class="container-login100-form-btn">
+              <button class="login100-form-btn" (click)="kayitol()">  
+                  <ion-icon name="md-musical-notes"></ion-icon>&nbsp;
+                  Kayıt Ol     
+              </button>
+            </div>
+            <h6 (click)="sifremiunuttump()"><ion-icon name="ios-help-buoy">&nbsp;</ion-icon><u>Şifremi Unuttum</u></h6>
+            
+          </form>
+        </div>
+      </div>
+</div>
+-->

@@ -1,0 +1,34 @@
+page-chat {
+   
+  .user_name {
+        color: #afafaf;
+    }
+    .message {
+        padding: 10px !important;
+        transition: all 250ms ease-in-out !important;
+        border-radius: 10px !important;
+        margin-bottom: 10px !important;
+       background: blue;
+        color: #dcdcdc  !important;
+    }
+    .my_message {
+        background: color($colors, danger) !important;
+        color: #dcdcdc  !important;
+    }
+    .other_message {
+      padding: 10px !important;
+      transition: all 250ms ease-in-out !important;
+      border-radius: 10px !important;
+      margin-bottom: 10px !important;
+      background: #961a1a !important;
+        color: #dcdcdc  !important;
+    }
+    .time {
+        color: #afafaf;
+        float: right;
+        font-size: small;
+    }
+    .message_row {
+        background-color: #fff;
+    }
+}

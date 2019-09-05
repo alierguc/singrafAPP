@@ -1,0 +1,85 @@
+<!--
+  Generated template for the YorumlarPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="dark">
+    <ion-title center>Yorumlar</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+  <ion-content padding>
+    <div class="canvasi" *ngIf="!kullaniciYorum">
+      <lottie-animation-view *ngIf="!kullaniciYorum"
+      [options]="lottieConfig"
+      [width]="300"
+      [height]="300"
+      >
+    </lottie-animation-view>
+    </div>
+      
+   <ion-card *ngFor="let user of kullaniciYorum">
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="{{user.IMAGE}}" (click)="presentPopover(user.USER_ID,user.N_NAME,user.IMAGE)">
+      </ion-avatar>
+      <h2>{{user.N_NAME}}</h2>
+      <ion-note>
+        {{user.DATE}}
+       </ion-note>
+    </ion-item>
+    <ion-card-content>
+      <p>{{user.COMMENT}}</p>
+    </ion-card-content>
+    <ion-row>
+      <ion-col col-3 *ngIf="user.USER_ID != diger">
+        <button ion-button color="primary"   clear small icon-left (click)="commentYanitla(user.N_NAME)">
+        <ion-icon item-left name='text'></ion-icon>
+        Yanıtla
+      </button>
+      </ion-col>
+      <ion-col col-3 *ngIf="user.USER_ID == diger">
+        <button ion-button color="primary"  clear small icon-left (click)="Sil(user.COMMENT_ID)">
+        <ion-icon item-right name='ios-trash'></ion-icon>
+        Sil
+      </button>
+      </ion-col>
+    </ion-row>      
+    <div class="divider div-transparent"></div>
+  </ion-card>
+
+
+ 
+   
+ 
+        <strong><p *ngIf="noRecord" style="color:rgb(160, 154, 154);  text-align:center;">Daha Fazla Kullanıcı Yorumu Bulunmamaktadır</p></strong>
+    
+
+      <ion-infinite-scroll style="height:5vh;" (ionInfinite)="doInfinite($event)" *ngIf="!noRecord">
+        <ion-infinite-scroll-content></ion-infinite-scroll-content>
+      </ion-infinite-scroll>
+     
+  </ion-content>
+  
+  <ion-footer>
+      <ion-toolbar>
+        <ion-item >
+          <ion-input placeholder="Yorumunuz" type="username" [(ngModel)]="comment" floating>     
+          </ion-input> 
+          
+          <button ion-button clear xl item-right (click)="yorumYap()"><strong>Yorum Yap</strong><p></p> 
+            <ion-icon name="ios-send">           
+            </ion-icon>
+            
+
+          </button> 
+        </ion-item>
+          
+      </ion-toolbar>
+    </ion-footer>
+    

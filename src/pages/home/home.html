@@ -1,0 +1,158 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<ion-header>
+  <ion-navbar color="dark" hideBackButton>
+
+    <button ion-button icon-only show menuToggle style=" margin-top:6%;">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <img style="margin-left: 6; margin-top:10%; background-color: #ce0e0e;" alt="Company Logo" height="50px"
+      width="130px" src="assets/imgs/slogo.png">
+
+
+
+    <ion-buttons end style="margin-top:6%;">
+      <div>
+        <button id="notification-button" ion-button clear xl (click)='muzikAra()'>
+          <ion-icon name="search" color="label-color">
+
+          </ion-icon>
+        </button>
+      </div>
+    </ion-buttons>
+    <ion-buttons end style="margin-top:6%;">
+        <div>
+          <button id="notification-button" ion-button clear xl (click)="reklam()">
+            <ion-icon name="ios-nutrition" color="secondary">
+  
+            </ion-icon>
+          </button>
+        </div>
+      </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Aşağı Kaydırdığınızda Yenilenir."
+      refreshingSpinner="crescent" refreshingText="Yenileniyor...">
+    </ion-refresher-content>
+  </ion-refresher>
+ 
+ 
+
+
+  <div class="canvasi" *ngIf="!users">
+    <lottie-animation-view *ngIf="!users" [options]="lottieConfig" [width]="300" [height]="300">
+    </lottie-animation-view>
+  </div>
+  <div class="canvasi" *ngIf="!users">
+    <lottie-animation-view *ngIf="!users" [options]="lottieConfig" [width]="300" [height]="300">
+    </lottie-animation-view>
+  </div>
+  <div class="canvasi" *ngIf="!users">
+    <lottie-animation-view *ngIf="!users" [options]="lottieConfig" [width]="300" [height]="300">
+    </lottie-animation-view>
+  </div>
+  <div class="canvasi" *ngIf="lottieControl">
+    <lottie-animation-view *ngIf="lottieControl" [options]="lottieConfig2" [width]="300" [height]="300">
+    </lottie-animation-view>
+  </div>
+  <p *ngIf="lottieControl" style="font-size: 24px; color:#564f4f; width:100%; text-align:center;">Henüz içerik yok</p>
+  <autoplay-content>
+  <ion-card no-padding *ngFor="let user of users" style="margin-top:40px; margin-bottom: 10px;">
+
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="{{user.IMAGE}}" (click)="presentPopover(user.USER_ID,user.N_NAME,user.IMAGE)">
+      </ion-avatar>
+      <strong>
+        <h2>{{user.N_NAME}}</h2>
+      </strong>
+    </ion-item>
+<div>
+    <video width="900" height="180"  poster="{{user.THUMB}}">      
+      <source src="{{user.VIDEO}}#t=0" type="video/mp4">
+      Videonuz Yüklenemiyor
+    </video>
+  </div>
+    <ion-card-content>
+      <ion-chip color="label-color">
+        <ion-icon name="md-time"></ion-icon>
+        <ion-label color="danger">
+          <p style="color:rgb(0, 35, 102); font-size:3.5vw"><strong>Yüklenme Tarihi : </strong>{{user.UPLOAD_DATE}}</p>
+        </ion-label>
+      </ion-chip>
+    </ion-card-content>
+    <ion-card-content>
+      <ion-chip color="label-color">
+        <ion-icon name="md-create"></ion-icon> 
+        <ion-label color="danger">
+          <div>
+         <p style="color:rgb(0, 35, 102); text-align:left; font-size:3.5vw;  margin-right: 2px; float: right; "><strong>Söz Müzik : </strong>{{user.MELODY_NAME_SURNAME}}</p>
+         <div style="float: right;"></div>
+        </div>
+        </ion-label>
+     
+      </ion-chip>
+    </ion-card-content>
+    <ion-card-content>
+      <ion-chip color="label-color">
+        <ion-icon name="ios-microphone"></ion-icon>
+        <ion-label color="dark">
+          <p style="color:rgb(0, 35, 102); font-size:3vw; padding-right: 2px; font-size:3.5vw "><strong>Şarkı : </strong>{{user.MUSIC_NAME}}</p>
+        </ion-label>
+      </ion-chip>
+    </ion-card-content>
+    <ion-card-content>
+      <ion-chip color="label-color">
+        <ion-icon name="md-musical-notes"></ion-icon>
+        <ion-label color="dark">
+          <p style="color:rgb(0, 35, 102); font-size:3vw; font-size:3.5vw"><strong>Tür : </strong>{{user.CATEGORY_NAME}}</p>
+        </ion-label>
+      </ion-chip>
+    </ion-card-content>
+    <br>
+    <br>
+    <p style="font-family: Arial, Helvetica, sans-serif; margin-left:5%; color: gray;" (click)="likepage(user.MUSIC_ID)">{{user.LIKES}} Beğenme</p>
+    <ion-row>
+      <ion-col>
+        <button ion-button color="primary" clear small icon-start (click)="toggleIcon(user.MUSIC_ID,user.L)">
+          <ion-icon [name]="user.L"></ion-icon>
+          BEĞEN
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button color="primary" clear small icon-start (click)="yorumlar(user.MUSIC_ID)">
+          <ion-icon name='text'></ion-icon>
+          Yorum Yap
+          &nbsp;<ion-badge item-end>{{user.COMMENT_TOTAL}}</ion-badge>
+        </button>
+
+      </ion-col>
+      <ion-col>
+        <button ion-button color="primary" clear small icon-start (click)="bildirilerTetikle(user.MUSIC_ID)">
+          <ion-icon name='ios-flame'></ion-icon>
+          Bildir
+        </button>
+      </ion-col>
+
+    </ion-row>
+  
+    <div class="divider div-transparent"></div>
+  </ion-card>
+</autoplay-content>
+  <br>
+  <br>
+  <br>
+  <strong>
+    <p *ngIf="noRecord" style="color:rgb(160, 154, 154); margin-top: 0px;  text-align:center;">Daha Fazla Gönderi
+      Bulunamamaktadır.</p>
+  </strong>
+  <br>
+
+  <ion-infinite-scroll style="height:1vh;" (ionInfinite)="doInfinite($event)" *ngIf="!noRecord">
+    <ion-infinite-scroll-content loadingSpinner="crescent" loadingText="Yükleniyor...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+</ion-content>

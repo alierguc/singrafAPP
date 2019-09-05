@@ -1,0 +1,71 @@
+<ion-header>
+
+  <ion-navbar color="dark">
+      <button ion-button menuToggle style="margin-top:6%;">
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title center style="margin-top:6%;">Singraf Magazin</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+    <div class="canvasi" *ngIf="!Haberler">
+        <lottie-animation-view *ngIf="!Haberler"
+        [options]="lottieConfig"
+        [width]="300"
+        [height]="300"
+        >
+      </lottie-animation-view>
+      </div>
+      <div class="canvasi" *ngIf="!Haberler">
+          <lottie-animation-view *ngIf="!Haberler"
+          [options]="lottieConfig"
+          [width]="300"
+          [height]="300"
+          >
+        </lottie-animation-view>
+        </div>
+        <div style="margin-top:12%; height:110px; width:100%;"></div>
+        <div class="wrapper" *ngFor="let user of Haberler">
+            <img src="{{user.RESIM}}" onerror="this.src='../assets/imgs/nophoto.png';"/>
+          <div class="imageInfo">
+            <h3 id="imgTitle" (click)="icerikGit(user.ID)">{{user.BASLIK}}</h3>
+          </div>
+        </div>
+        <br>
+        <strong>
+            <p *ngIf="noRecord" style="color:rgb(160, 154, 154);  text-align:center;">Daha Fazla Haber Bulunamamaktadır.</p>
+          </strong>
+  <!--
+  <ion-card *ngFor="let user of Haberler">
+    <ion-card-title justify>
+      {{user.BASLIK}}
+    </ion-card-title>
+    <img src="{{user.RESIM}}" onerror="this.src='../assets/imgs/nophoto.png';" />
+    <ion-card-content>
+      <button ion-button color="primary" clear small icon-start>
+        <ion-icon name='md-list-box'></ion-icon>
+        <b>
+          <p style="color:#ce0e0e" (click)="icerikGit(user.ID)">Haberin İçeriğini Gör</p>
+        </b>
+      </button>
+    </ion-card-content>
+  </ion-card>
+  <br>
+  <br>
+  <br>>
+  <strong>
+    <p *ngIf="noRecord" style="color:rgb(160, 154, 154);  text-align:center;">Daha Fazla Haber Bulunamamaktadır.</p>
+  </strong>
+  <br>
+-->
+
+  <ion-infinite-scroll style="height:2vh;" (ionInfinite)="doInfinite($event)" *ngIf="!noRecord">
+    <ion-infinite-scroll-content loadingSpinner="crescent" loadingText="Yükleniyor...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+
+</ion-content>

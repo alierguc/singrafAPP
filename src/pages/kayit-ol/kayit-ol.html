@@ -1,0 +1,102 @@
+<ion-header no-border>
+
+  <ion-navbar hideBackButton *navbar hideMenuToggle>
+    <ion-title>kayitolp</ion-title>
+  </ion-navbar>
+
+</ion-header>
+  <div class="begin_login">
+        <div class="limiter">
+          <div class="container-login100">
+         <div class="wrap-login100">
+      <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+        <input class="input100" type="text" name="email" placeholder="Kullanıcı Adı  " [(ngModel)]="userData.n_name">
+        <span class="focus-input100"></span>
+        <span class="symbol-input100">
+          <ion-icon name="md-person"></ion-icon>
+        </span>
+      </div>
+      <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+        <input class="input100" type="text" name="email" placeholder="Adınız " [(ngModel)]="userData.f_name">
+        <span class="focus-input100"></span>
+        <span class="symbol-input100">
+          <ion-icon name="ios-person-outline"></ion-icon>
+        </span>
+      </div>
+      <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+        <input class="input100" type="text" placeholder="Soyadınız " type="text" [(ngModel)]="userData.l_name">
+        <span class="focus-input100"></span>
+        <span class="symbol-input100">
+          <ion-icon name="ios-person"></ion-icon>
+        </span>
+      </div>
+      <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+        <input class="input100" type="text" placeholder="E-Posta Adresiniz " [(ngModel)]="userData.mail">
+        <span class="focus-input100"></span>
+        <span class="symbol-input100">
+          <ion-icon name="ios-mail"></ion-icon>
+        </span>
+      </div>
+      <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+        <input class="input100" type="text" name="email" placeholder="Şifreniz " type="password" [(ngModel)]="userData.pass">
+        <span class="focus-input100"></span>
+        <span class="symbol-input100">
+          <ion-icon name="md-lock"></ion-icon>
+        </span>
+      </div>
+      <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+        <input class="input100" type="text" name="email" placeholder="Şifre Tekrar " type="password" [(ngModel)]="repass">
+        <span class="focus-input100"></span>
+        <span class="symbol-input100">
+          <ion-icon name="md-unlock"></ion-icon>
+        </span>
+      </div>
+
+
+      <div class="container-login100-form-btn">
+        <button class="login100-form-btn" (click)="register()">
+          <ion-icon name="md-log-in"></ion-icon>&nbsp;
+          Kayıt Ol
+        </button>
+      </div>
+
+      <div class="container-login100-form-btn">
+        <button class="login100-form-btn" (click)="gpage()">
+          <ion-icon name="ios-arrow-back"></ion-icon>&nbsp;
+          Giriş Sayfasına Dön
+        </button>
+      </div>
+</div>
+</div>
+</div>
+      <!--
+  <ion-list class="registerpage">
+    <ion-item>
+      <ion-input placeholder="Kullanıcı Adı : " type="username" [(ngModel)]="userData.n_name">
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input placeholder="Adınız :" type="text" [(ngModel)]="userData.f_name">
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input placeholder="Soyadınız :" type="text" [(ngModel)]="userData.l_name">
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input placeholder="E-Posta Adresiniz :" type="text" [(ngModel)]="userData.mail">
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input placeholder="Şifreniz :" type="password" [(ngModel)]="userData.pass">
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input placeholder="Şifre Tekrar :" type="password" [(ngModel)]="repass">
+      </ion-input>
+    </ion-item>
+  </ion-list>
+  <button ion-button full (click)="register()">Kayıt Ol</button>
+  <button ion-button full (click)="gpage()">Giriş Ekranına Dön</button>
+-->
+

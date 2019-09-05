@@ -1,0 +1,4 @@
+#Tue Jun 18 20:16:13 EET 2019
+base.0=C\:\\Users\\Ali\\Desktop\\singapp121\\singapp121\\singapp\\platforms\\android\\app\\build\\intermediates\\transforms\\dex\\release\\0
+path.0=classes.dex
+renamed.0=classes.dex

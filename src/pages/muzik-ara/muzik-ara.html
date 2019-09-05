@@ -1,0 +1,116 @@
+
+<ion-header>
+  <ion-navbar BackButton color="dark">
+    <ion-item class="bg-imagelogin">
+      <ion-input color="television" type="username" placeholder="Şarkı adına göre ara" [(ngModel)]="bilgi.text">
+      </ion-input>
+    </ion-item>
+    <ion-buttons end>  
+        <div>
+          <button id="notification-button" ion-button clear xl (click)='muzikAra()'>
+            <ion-icon name="search">
+            </ion-icon>
+          </button>
+        </div>
+      </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+   <div class="l" *ngIf="!users">
+  <lottie-animation-view *ngIf="!users"
+  [options]="lottieConfig"
+  [width]="300"
+  [height]="300"
+  >
+</lottie-animation-view>
+</div>
+<autoplay-content>
+  <ion-card *ngFor="let user of users" style="margin-top:40px; margin-bottom: 10px;">
+
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="{{user.IMAGE}}" (click)="presentPopover(user.USER_ID,user.N_NAME,user.IMAGE)">
+      </ion-avatar>
+      <strong><h2>{{user.N_NAME}}</h2></strong>
+    </ion-item>
+    <div>
+      <video controls poster="{{user.THUMB}}">
+        <source src="{{user.VIDEO}}#t=0" type="video/mp4">
+        Videonuz Yüklenemiyor
+      </video>
+    </div>
+    <ion-card-content>
+      <ion-chip color="label-color">
+        <ion-icon name="md-time"></ion-icon>
+        <ion-label color="danger">
+          <p style="color:rgb(0, 35, 102);"><strong>Yüklenme Tarihi : </strong>{{user.UPLOAD_DATE}}</p>
+        </ion-label>
+      </ion-chip>
+    </ion-card-content>
+    <ion-card-content>
+      <ion-chip color="label-color">
+        <ion-icon name="md-create"></ion-icon>
+        <ion-label color="danger">
+          <p style="color:rgb(0, 35, 102);"><strong>Söz Müzik : </strong>{{user.MELODY_NAME_SURNAME}}</p>
+        </ion-label>
+      </ion-chip>
+    </ion-card-content>
+    <ion-card-content>
+      <ion-chip color="label-color">
+        <ion-icon name="ios-microphone"></ion-icon>
+        <ion-label color="dark">
+          <p style="color:rgb(0, 35, 102); "><strong>Şarkı Adı : </strong>{{user.MUSIC_NAME}}</p>
+        </ion-label>
+      </ion-chip>
+    </ion-card-content>
+    <ion-card-content>
+      <ion-chip color="label-color">
+        <ion-icon name="md-musical-notes"></ion-icon>
+        <ion-label color="dark">
+          <p style="color:rgb(0, 35, 102);"><strong>Tür : </strong>{{user.CATEGORY_NAME}}</p>
+        </ion-label>
+      </ion-chip>
+    </ion-card-content>
+    <br>
+    <br>
+    <ion-row>
+      <ion-col>
+        <button ion-button color="primary" clear small icon-start (click)="toggleIcon(user.MUSIC_ID,user.L)">
+          <ion-icon [name]="user.L"></ion-icon>
+          {{user.LIKES}}
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button color="primary" clear small icon-start (click)="yorumlar(user.MUSIC_ID)">
+          <ion-icon name='text'></ion-icon>
+          Yorum Yap
+          &nbsp;<ion-badge item-end>{{user.COMMENT_TOTAL}}</ion-badge>
+        </button>
+
+      </ion-col>
+      <ion-col>
+        <button ion-button color="primary" clear small icon-start (click)="bildirilerTetikle(user.MUSIC_ID)">
+          <ion-icon name='ios-flame'></ion-icon>
+          Bildir
+        </button>
+      </ion-col>
+
+    </ion-row>
+  </ion-card>
+</autoplay-content>
+  <br>
+  <br>
+  <br>
+  <strong><p *ngIf="noRecord" style="color:rgb(160, 154, 154); margin-top: 0px;  text-align:center;">Daha Fazla Arama Sonucu Bulunamamaktadır.</p></strong>
+  <br>
+ 
+    <lottie-animation-view *ngIf="record" [options]="lottieConfig3" [width]="300" [height]="400">
+    </lottie-animation-view>
+    <p *ngIf="record" style="font-size: 16px; color:#ce0e0e; width:100%; text-align:center;">
+      Aradığınız içerik bulunamamaktadır.</p>
+  <ion-infinite-scroll style="height:1vh;" (ionInfinite)="doInfinite($event)" *ngIf="!noRecord">
+    <ion-infinite-scroll-content loadingSpinner="crescent" loadingText="Yükleniyor...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

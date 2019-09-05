@@ -1,0 +1,44 @@
+page-muzik-ara {
+    input[type="image"]
+    {
+     float:left;
+     height:20px;
+     margin-left:2px;
+     margin-right:5px;
+     margin-top:2px;
+    }
+    ion-scroll[scroll-avatar]{
+        height: 60px;
+      }
+  
+    .l
+    {
+        margin-top: 40%;
+    }
+
+    ion-card {
+      
+      border-radius:30px !important;
+      display: flex;
+      flex-direction: column;
+      width: 100% !important;
+      margin: 0 !important;
+      margin-top: 6% !important;
+      box-shadow: none !important;
+      
+      }
+   
+    .searchbar-search-icon { display:none; width:0; height:0; }
+    .searchbar-placeholder{margin-left: 0;}
+    video{
+      height: 50%; 
+      border-radius: 10px;
+      width:100%;
+      padding-left: 16%;
+      padding-right: 15%;
+      background-color: #000000;     
+   
+      
+      
+      }
+}
