@@ -1,7 +1,7 @@
 # singrafApp
 - Singraf Mobile Social Music Sharing Application (ionic 3) (Singraf Mobil Sosyal Müzik Paylaşım Platformu)
 <br>
-#Heading 1 link [GooglePlay Singraf](https://github.com/pandao/editor.md "Heading link")
+[Google Play Singraf App](https://github.com/pandao/editor.md "SingrafApp")
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 <br>
