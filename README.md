@@ -15,22 +15,22 @@
 ![](https://image.winudf.com/v2/image1/aW8uaW9uaWMuc2luZ3JhZl9zY3JlZW5fNV8xNTU5MzI3ODM3XzAwNw/screen-5.jpg?fakeurl=1&type=.jpg)
 ![](https://image.winudf.com/v2/image1/aW8uaW9uaWMuc2luZ3JhZl9zY3JlZW5fMV8xNTU5MzI3ODM1XzA1OA/screen-1.jpg?fakeurl=1&type=.jpg)
 
-####Inline code
 
-`$ npm install marked`
+`$ npm install -g ionic --release`
 
-> The overriding design goal for Markdown's
 
-> formatting syntax is to make it as readable
-> as possible. The idea is that a
+> Kullanılan Pluginler;
 
-> Markdown-formatted document should be
-
-> publishable as-is, as plain text, without
-
-> looking like it's been marked up with tags
-
-> or formatting instructions.
+> cordova-plugin-inappbrowser
+> cordova-plugin-nativeaudio
+> cordova-plugin-statusbar
+> cordova-plugin-admob-free
+> cordova-plugin-file
+> cordova-plugin-file-transfer
+> cordova-plugin-inappbrowser
+> cordova-plugin-inappbrowser
+> cordova-plugin-media-capture
+> cordova-plugin-media
 <br>
 
 [Google Play Singraf App](https://play.google.com/store/apps/details?id=io.ionic.singraf&hl=en_US "SingrafApp")
