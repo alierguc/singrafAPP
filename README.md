@@ -6,6 +6,8 @@
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 <br>
 <br>
+![](https://pandao.github.io/editor.md/images/logos/editormd-logo-180x180.png)
+
 > The overriding design goal for Markdown's
 
 > formatting syntax is to make it as readable
