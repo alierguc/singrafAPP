@@ -29,5 +29,5 @@
 > or formatting instructions.
 <br>
 
-[Google Play Singraf App](https://github.com/pandao/editor.md "SingrafApp")
+[Google Play Singraf App](https://play.google.com/store/apps/details?id=io.ionic.singraf&hl=en_US "SingrafApp")
 ## singrafApp
