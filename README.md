@@ -12,7 +12,7 @@
 ![](https://image.winudf.com/v2/image1/aW8uaW9uaWMuc2luZ3JhZl9zY3JlZW5fMF8xNTU5MzI3ODM1XzAxMg/screen-0.jpg?fakeurl=1&type=.jpg)
 ![](https://image.winudf.com/v2/image1/aW8uaW9uaWMuc2luZ3JhZl9zY3JlZW5fMl8xNTU5MzI3ODM1XzA1Nw/screen-2.jpg?fakeurl=1&type=.jpg)
 ![](https://image.winudf.com/v2/image1/aW8uaW9uaWMuc2luZ3JhZl9zY3JlZW5fNV8xNTU5MzI3ODM3XzAwNw/screen-5.jpg?fakeurl=1&type=.jpg)
-![](https://www.google.com/search?q=googleplay+singraf&tbm=isch&sxsrf=ACYBGNRB_YBPALyu9vLwGII7dxlGbiN0iA:1569072724733&source=lnms&sa=X&ved=0ahUKEwi9qomzg-LkAhUQxYsKHUcDCw0Q_AUIMygB&biw=1707&bih=838#imgrc=YUJGR93sBtj9MM:)
+![](https://image.winudf.com/v2/image1/aW8uaW9uaWMuc2luZ3JhZl9zY3JlZW5fMV8xNTU5MzI3ODM1XzA1OA/screen-1.jpg?fakeurl=1&type=.jpg)
 
 > The overriding design goal for Markdown's
 
