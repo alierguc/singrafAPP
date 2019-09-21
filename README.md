@@ -8,7 +8,7 @@
 <br>
 ![](https://image.winudf.com/v2/image1/aW8uaW9uaWMuc2luZ3JhZl9pY29uXzE1NTkzMjc4MzRfMDY5/icon.png?w=170&fakeurl=1)
 ![](https://image.winudf.com/v2/image1/aW8uaW9uaWMuc2luZ3JhZl9zY3JlZW5fMF8xNTU5MzI3ODM1XzAxMg/screen-0.jpg?fakeurl=1&type=.jpg)
-![](https://image.winudf.com/v2/image1/aW8uaW9uaWMuc2luZ3JhZl9pY29uXzE1NTkzMjc4MzRfMDY5/icon.png?w=170&fakeurl=1)
+![](https://image.winudf.com/v2/image1/aW8uaW9uaWMuc2luZ3JhZl9zY3JlZW5fMl8xNTU5MzI3ODM1XzA1Nw/screen-2.jpg?fakeurl=1&type=.jpg)
 > The overriding design goal for Markdown's
 
 > formatting syntax is to make it as readable
