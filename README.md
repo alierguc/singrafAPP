@@ -22,14 +22,23 @@
 > Kullanılan Pluginler;
 
 > cordova-plugin-inappbrowser
+
 > cordova-plugin-nativeaudio
+
 > cordova-plugin-statusbar
+
 > cordova-plugin-admob-free
+
 > cordova-plugin-file
+
 > cordova-plugin-file-transfer
+
 > cordova-plugin-inappbrowser
+
 > cordova-plugin-inappbrowser
+
 > cordova-plugin-media-capture
+
 > cordova-plugin-media
 <br>
 
