@@ -6,6 +6,7 @@
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 <br>
 <br>
+#Heading 1 link [GooglePlay Singraf](https://github.com/pandao/editor.md "Heading link")
 ![](https://image.winudf.com/v2/image1/aW8uaW9uaWMuc2luZ3JhZl9pY29uXzE1NTkzMjc4MzRfMDY5/icon.png?w=170&fakeurl=1)
 <br>
 
